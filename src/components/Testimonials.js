@@ -7,7 +7,7 @@ const Testimonials = () => {
       name: "Sarah L.",
       company: "QuantumLeap CEO",
       review:
-        "DevAgency transformed our vision into a stunning reality. Their attention to detail and technical expertise are second to none.",
+        "Appnitive Technologies transformed our vision into a stunning reality. Their attention to detail and technical expertise are second to none.",
       avatar: "https://i.pravatar.cc/150?img=1",
     },
     {
@@ -28,7 +28,7 @@ const Testimonials = () => {
       name: "David R.",
       company: "ConnectSphere Lead",
       review:
-        "Working with DevAgency was a game-changer for us. Their strategic insights helped us refine our product and go-to-market strategy.",
+        "Working with Appnitive Technologies was a game-changer for us. Their strategic insights helped us refine our product and go-to-market strategy.",
       avatar: "https://i.pravatar.cc/150?img=4",
     },
     {

@@ -29,7 +29,7 @@ const Header = ({ scrolled, navigateTo }) => {
           >
             <Code className="w-8 h-8 text-indigo-400" />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500">
-              DevAgency
+              Appnitive Technologies
             </span>
           </a>
         </div>

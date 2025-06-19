@@ -33,14 +33,14 @@ const AboutUs = () => {
               Pioneering Digital Innovation, Together
             </h3>
             <p className="text-gray-400 mb-8 leading-relaxed">
-              DevAgency is more than just a development agency; we are your
-              strategic partners in navigating the digital landscape. Our team
-              of passionate designers, developers, and strategists is dedicated
-              to transforming your ideas into impactful digital realities. We
-              believe in collaboration, transparency, and a relentless pursuit
-              of excellence. Our mission is to empower businesses like yours
-              with cutting-edge technology and creative solutions that foster
-              growth and create lasting value.
+              Appnitive Technologies is more than just a development agency; we
+              are your strategic partners in navigating the digital landscape.
+              Our team of passionate designers, developers, and strategists is
+              dedicated to transforming your ideas into impactful digital
+              realities. We believe in collaboration, transparency, and a
+              relentless pursuit of excellence. Our mission is to empower
+              businesses like yours with cutting-edge technology and creative
+              solutions that foster growth and create lasting value.
             </p>
             <div className="space-y-6">
               {coreValues.map((value) => (

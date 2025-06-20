@@ -1,67 +1,67 @@
 import React from "react";
-
+import ShopEaseImage from "../assets/ShopEase.png";
+import skillLink from "../assets/skill-link.png";
+import tastyBytes from "../assets/tasty-bytes.png";
+import learnX from "../assets/learnx.png";
+import dreamHomes from "../assets/dreamhomes.png";
 const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "QuantumLeap AI",
-      category: "Web App",
-      image:
-        "https://images.pexels.com/photos/6771426/pexels-photo-6771426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      title: "ShopEase",
+      category: "Web App/Mobile",
+      image: ShopEaseImage,
       description:
-        "An advanced data analytics platform that uses machine learning to provide actionable business insights. Features real-time data visualization and predictive modeling.",
+        "ShopEase is a modern e-commerce platform that brings users a curated online shopping experience. It focuses on fashion, accessories, electronics, and lifestyle goods with a personalized feed and engaging design.",
       techStack: ["React", "Node.js", "Python", "D3.js", "AWS"],
     },
     {
       id: 2,
-      title: "Nova Wallet",
-      category: "Mobile App",
-      image:
-        "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      title: "SkillLink",
+      category: "Web App/Mobile App",
+      image: skillLink,
       description:
-        "A secure and user-friendly crypto wallet for managing digital assets on the go. Integrated with multiple blockchains and DeFi protocols.",
+        "SkillLink is a sleek platform designed to connect skilled freelancers with businesses or individuals looking to hire. It streamlines the entire hiring journey—from job posting to communication and delivery.",
       techStack: ["React Native", "Firebase", "Solidity", "GraphQL"],
     },
     {
       id: 3,
-      title: "Stellar E-commerce",
-      category: "Website",
-      image:
-        "https://images.pexels.com/photos/6331230/pexels-photo-6331230.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      title: "Tasty Bites",
+      category: "Wep App / Mobile App",
+      image: tastyBytes,
       description:
-        "A scalable e-commerce solution with a custom CMS, personalized recommendations, and a seamless checkout experience, boosting conversion rates by 30%.",
+        "TastyBites is a food ordering and dining management app designed specifically for restaurants. It allows customers to browse the digital menu, customize their orders, and book tables—all in one place. The app emphasizes user experience with high-quality food images, real-time availability, and seamless ordering.",
       techStack: ["Vue.js", "Shopify API", "Node.js", "PostgreSQL"],
     },
     {
       id: 4,
-      title: "ConnectSphere",
-      category: "Mobile App",
-      image:
-        "https://images.pexels.com/photos/4549409/pexels-photo-4549409.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      title: "LearnX",
+      category: "Web App /Mobile App",
+      image: learnX,
       description:
-        "A social networking app designed to connect professionals based on skills and interests. Features include event management, mentorship matching, and group discussions.",
+        "LearnX is a modern e-learning platform designed to make online education accessible, engaging, and effective. It offers a rich catalog of curated video courses across various subjects, from academic content to skill-based learning. Each course includes structured modules, video lectures, downloadable resources, and interactive quizzes.",
       techStack: ["Flutter", "Firebase", "Google Cloud", "Algolia"],
     },
-    {
-      id: 5,
-      title: "DataViz Pro",
-      category: "Web App",
-      image:
-        "https://images.pexels.com/photos/6771740/pexels-photo-6771740.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      description:
-        "An interactive data visualization tool that allows users to create stunning charts and dashboards from complex datasets with a simple drag-and-drop interface.",
-      techStack: ["Svelte", "TypeScript", "MongoDB", "Chart.js"],
-    },
-    {
-      id: 6,
-      title: "Horizon Travel",
-      category: "Website",
-      image:
-        "https://images.pexels.com/photos/5794250/pexels-photo-5794250.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      description:
-        "A travel booking website featuring immersive destination guides, an intuitive booking engine, and personalized itinerary planning for global travelers.",
-      techStack: ["Gatsby", "Contentful", "GraphQL", "Netlify"],
-    },
+    // {
+    //   id: 5,
+    //   title: "Dream Homes",
+    //   category: "Web App / Mobile App",
+    //   image: dreamHomes,
+    //   description:
+    //     "DreamHomes is a real estate platform built to simplify the process of buying, renting, or selling properties. The site allows users to explore property listings with immersive visuals, powerful filters, and detailed descriptions.",
+    //   techStack: ["Svelte", "TypeScript", "MongoDB", "Chart.js"],
+    // },
+
+    // {
+    //   id: 6,
+    //   title: "Horizon Travel",
+    //   category: "Website",
+    //   image:
+    //     "https://images.pexels.com/photos/5794250/pexels-photo-5794250.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    //   description:
+    //     "A travel booking website featuring immersive destination guides, an intuitive booking engine, and personalized itinerary planning for global travelers.",
+    //   techStack: ["Gatsby", "Contentful", "GraphQL", "Netlify"],
+    // },
   ];
 
   return (

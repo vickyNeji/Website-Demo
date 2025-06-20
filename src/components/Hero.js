@@ -1,42 +1,130 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const Hero = ({ scrollToSection }) => {
+const Hero = () => {
+  const slides = [
+    {
+      image:
+        "https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg",
+      title: "Discover Possibilities",
+      subtitle: "Innovative web & mobile solutions for your vision.",
+    },
+    {
+      image:
+        "https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      title: "Connect Ideas",
+      subtitle: "Bridge your goals with powerful technology.",
+    },
+    {
+      image:
+        "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      title: "Elevate Experiences",
+      subtitle: "Deliver seamless digital journeys that matter.",
+    },
+    {
+      image:
+        "https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg",
+      title: "Build the Future",
+      subtitle: "We craft tomorrow’s software today.",
+    },
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const timeoutRef = useRef(null);
+
+  const resetTimeout = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  };
+
+  useEffect(() => {
+    resetTimeout();
+    timeoutRef.current = setTimeout(
+      () =>
+        setCurrentIndex((prevIndex) =>
+          prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+        ),
+      5000 // Change slide every 5 seconds
+    );
+
+    return () => {
+      resetTimeout();
+    };
+  }, [currentIndex]);
+
+  const goToPrev = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const goToNext = () => {
+    const isLastSlide = currentIndex === slides.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const goToSlide = (slideIndex) => {
+    setCurrentIndex(slideIndex);
+  };
+
   return (
     <section
       id="home"
-      className="h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.8)), url('https://placehold.co/1920x1080/111827/FFFFFF?text=.')",
-      }}
+      className="h-screen w-full relative group overflow-hidden"
     >
-      <div className="container mx-auto text-center px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight leading-tight">
-          We Build{" "}
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500">
-            Digital Experiences
-          </span>{" "}
-          That Drive Growth
-        </h1>
-        <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-          From stunning websites to powerful mobile apps, our team of experts
-          brings your ideas to life with cutting-edge technology and
-          pixel-perfect design.
-        </p>
-        <div className="flex justify-center space-x-4">
-          <button
-            onClick={() => scrollToSection("portfolio")}
-            className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105"
-          >
-            View Our Work
-          </button>
-          <button
-            onClick={() => scrollToSection("services")}
-            className="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105"
-          >
-            Our Services
-          </button>
+      <div className="absolute top-0 left-0 w-full h-full z-0">
+        <div
+          className="w-full h-full flex transition-transform duration-1000 ease-in-out"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {slides.map((slide, index) => (
+            <div key={index} className="w-full h-full flex-shrink-0 relative">
+              <div
+                style={{ backgroundImage: `url(${slide.image})` }}
+                className="w-full h-full bg-center bg-cover"
+              ></div>
+              <div className="absolute top-0 left-0 w-full h-full bg-black/60"></div>
+            </div>
+          ))}
         </div>
+      </div>
+
+      <div className="absolute inset-0 flex items-center text-left text-white p-8 md:p-16 lg:p-24 z-10">
+        <div className="max-w-xl">
+          <h1
+            className="text-6xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight"
+            style={{ fontFamily: "Inter, sans-serif" }}
+          >
+            {slides[currentIndex].title}
+          </h1>
+          <p
+            className="mt-4 text-lg sm:text-xl md:text-2xl text-white-100"
+            style={{ fontFamily: "Inter, sans-serif" }}
+          >
+            {slides[currentIndex].subtitle}
+          </p>
+        </div>
+      </div>
+
+      <div className="hidden group-hover:block absolute top-1/2 -translate-y-1/2 left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer z-20">
+        <ChevronLeft onClick={goToPrev} size={30} />
+      </div>
+      <div className="hidden group-hover:block absolute top-1/2 -translate-y-1/2 right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer z-20">
+        <ChevronRight onClick={goToNext} size={30} />
+      </div>
+
+      <div className="absolute bottom-5 left-0 right-0 flex justify-center space-x-2 z-20">
+        {slides.map((_, slideIndex) => (
+          <div
+            key={slideIndex}
+            onClick={() => goToSlide(slideIndex)}
+            className={`h-3 rounded-full cursor-pointer transition-all duration-300 ${
+              currentIndex === slideIndex ? "w-8 bg-white" : "w-3 bg-white/50"
+            }`}
+          ></div>
+        ))}
       </div>
     </section>
   );

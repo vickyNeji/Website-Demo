@@ -48,7 +48,7 @@ function App() {
   };
 
   return (
-    <div className="bg-gray-900 text-white font-sans antialiased">
+    <div className="bg-black text-white font-sans antialiased">
       {currentPage === "home" && (
         <Header scrolled={scrolled} navigateTo={navigateTo} />
       )}

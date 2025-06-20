@@ -7,6 +7,7 @@ const Header = ({ scrolled, navigateTo }) => {
     { id: "services", name: "Services", page: "home" },
     { id: "about", name: "About Us", page: "home" },
     // { id: "blog", name: "Blog", page: "blog" },
+    { id: "contact", name: "Contact Us", page: "home" },
   ];
 
   return (
@@ -28,9 +29,7 @@ const Header = ({ scrolled, navigateTo }) => {
             className="flex items-center space-x-2 cursor-pointer"
           >
             <Code className="w-8 h-8 text-indigo-400" />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500">
-              Appnitive Technologies
-            </span>
+            <span className="text-white font-bold">Appnitive Technologies</span>
           </a>
         </div>
         <nav className="hidden md:flex space-x-8 items-center">
@@ -42,19 +41,13 @@ const Header = ({ scrolled, navigateTo }) => {
                 e.preventDefault();
                 navigateTo(link.page, link.id);
               }}
-              className="text-gray-300 hover:text-white transition duration-300 relative group cursor-pointer"
+              className="text-white-300 hover:text-white transition duration-300 relative group cursor-pointer"
             >
               {link.name}
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-400 transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
         </nav>
-        <button
-          onClick={() => navigateTo("home", "contact")}
-          className="hidden md:inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition-all duration-300 transform hover:scale-105 cursor-pointer"
-        >
-          Contact Us
-        </button>
         <button className="md:hidden text-gray-300 hover:text-white">
           <svg
             className="w-6 h-6"

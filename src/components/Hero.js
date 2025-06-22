@@ -51,7 +51,7 @@ const Hero = () => {
     return () => {
       resetTimeout();
     };
-  }, [currentIndex]);
+  }, [currentIndex, slides.length]);
 
   const goToPrev = () => {
     const isFirstSlide = currentIndex === 0;

@@ -1,5 +1,6 @@
 import React from "react";
-import { Code } from "lucide-react";
+
+import companyLogo from '../assets/APPNITIVE.png';
 
 const Footer = ({ scrollToSection }) => {
   return (
@@ -10,16 +11,23 @@ const Footer = ({ scrollToSection }) => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
-            <h3 className="text-xl font-bold mb-4 flex items-center space-x-2">
-              <Code className="w-6 h-6 text-indigo-400" />
-              <span>Appnitive Technologies</span>
-            </h3>
+           <h3 className="text-xl font-bold mb-4 flex items-center space-x-2">
+ 
+  
+  <img
+     src={companyLogo}  // <-- replace with correct path
+    alt="Appnitive Logo"
+    className="w-6 h-6 object-contain rounded-full"
+  />
+
+  <span>Appnitive Technologies</span>
+</h3>
             <p className="text-gray-400">
-              Building the future, one line of code at a time.
+              Appnitive Technologies is a growing software development and digital marketing agency dedicated to empowering businesses and end-users. We simplify complex processes with our innovative ideas, latest technologies — including cloud computing, AI/ML, modern web and mobile frameworks (React, Kotlin, Flutter), and advanced digital marketing tools — and a strong focus on quality and speed.
             </p>
           </div>
           <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <h4 className="font-semibold mb-4">Important Links</h4>
             <ul className="space-y-2">
               <li>
                 <a
@@ -30,7 +38,7 @@ const Footer = ({ scrollToSection }) => {
                   }}
                   className="text-gray-400 hover:text-indigo-400"
                 >
-                  Home
+                  About Us
                 </a>
               </li>
               <li>
@@ -42,7 +50,7 @@ const Footer = ({ scrollToSection }) => {
                   }}
                   className="text-gray-400 hover:text-indigo-400"
                 >
-                  Portfolio
+                  Careers
                 </a>
               </li>
               <li>
@@ -54,7 +62,7 @@ const Footer = ({ scrollToSection }) => {
                   }}
                   className="text-gray-400 hover:text-indigo-400"
                 >
-                  Services
+                  Privacy Policy
                 </a>
               </li>
               <li>
@@ -66,29 +74,96 @@ const Footer = ({ scrollToSection }) => {
                   }}
                   className="text-gray-400 hover:text-indigo-400"
                 >
-                  Contact
+                  Terms and Condition
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection("contact");
+                  }}
+                  className="text-gray-400 hover:text-indigo-400"
+                >
+                 Project Cancellation
+                </a>
+              </li>
+               <li>
+                <a
+                  href="#contact"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection("contact");
+                  }}
+                  className="text-gray-400 hover:text-indigo-400"
+                >
+                 Blogs
                 </a>
               </li>
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold mb-4">Legal</h4>
+            <h4 className="font-semibold mb-4">Featured Services</h4>
             <ul className="space-y-2">
               <li>
                 <a href="#" className="text-gray-400 hover:text-indigo-400">
-                  Privacy Policy
+                  Web Development
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-indigo-400">
-                  Terms of Service
+                  Mobile Development
+                </a>
+              </li>
+               <li>
+                <a href="#" className="text-gray-400 hover:text-indigo-400">
+                 Product Design
+                </a>
+              </li>
+               <li>
+                <a href="#" className="text-gray-400 hover:text-indigo-400">
+                  Digital Marketing
+                </a>
+              </li>
+               <li>
+                <a href="#" className="text-gray-400 hover:text-indigo-400">
+                  Other Services
                 </a>
               </li>
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold mb-4">Follow Us</h4>
+            <h4 className="font-semibold mb-4">Contact Us</h4>
             <div className="flex space-x-4">
+               <ul className="space-y-2">
+              <li>
+                <a href="#" className="text-gray-400 hover:text-indigo-400">
+                 Office Address
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-gray-400 hover:text-indigo-400">
+                 F-13, Third Floor, Block F, Sector 58, Noida, Uttar Pradesh 201301
+                </a>
+              </li>
+               <li>
+                <a href="#" className="text-gray-400 hover:text-indigo-400">
+                Email : technologiesappnitive@gmail.com
+                </a>
+              </li>
+               <li>
+                <a href="#" className="text-gray-400 hover:text-indigo-400">
+                  Phone:+91 7906053913 , 8979454370
+                </a>
+              </li>
+              
+            </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex justify-center space-x-4">
               <a
                 href="https://www.instagram.com/appnitivetechnologies/"
                 target="_blank"
@@ -118,11 +193,9 @@ const Footer = ({ scrollToSection }) => {
                 </svg>
               </a>
             </div>
-          </div>
-        </div>
-        <div className="mt-8 pt-8 border-t border-gray-700 text-center text-gray-500">
+        <div className="mt-8 font-bold pt-8 border-t border-gray-700 text-center text-gray-500">
           <p>
-            &copy; {new Date().getFullYear()} Appnitive Technologies. All rights
+            &copy; 2022–{new Date().getFullYear()} Appnitive Technologies. All rights
             reserved.
           </p>
         </div>

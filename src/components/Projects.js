@@ -3,13 +3,13 @@ import ShopEaseImage from "../assets/ShopEase.png";
 import skillLink from "../assets/skill-link.png";
 import tastyBytes from "../assets/tasty-bytes.png";
 import learnX from "../assets/learnx.png";
-import dreamHomes from "../assets/dreamhomes.png";
+
 const Projects = () => {
   const projects = [
     {
       id: 1,
       title: "ShopEase",
-      category: "Web App/Mobile",
+      
       image: ShopEaseImage,
       description:
         "ShopEase is a modern e-commerce platform that brings users a curated online shopping experience. It focuses on fashion, accessories, electronics, and lifestyle goods with a personalized feed and engaging design.",
@@ -18,7 +18,7 @@ const Projects = () => {
     {
       id: 2,
       title: "SkillLink",
-      category: "Web App/Mobile App",
+     
       image: skillLink,
       description:
         "SkillLink is a sleek platform designed to connect skilled freelancers with businesses or individuals looking to hire. It streamlines the entire hiring journey—from job posting to communication and delivery.",
@@ -27,7 +27,7 @@ const Projects = () => {
     {
       id: 3,
       title: "Tasty Bites",
-      category: "Wep App / Mobile App",
+  
       image: tastyBytes,
       description:
         "TastyBites is a food ordering and dining management app designed specifically for restaurants. It allows customers to browse the digital menu, customize their orders, and book tables—all in one place. The app emphasizes user experience with high-quality food images, real-time availability, and seamless ordering.",
@@ -36,7 +36,7 @@ const Projects = () => {
     {
       id: 4,
       title: "LearnX",
-      category: "Web App /Mobile App",
+      
       image: learnX,
       description:
         "LearnX is a modern e-learning platform designed to make online education accessible, engaging, and effective. It offers a rich catalog of curated video courses across various subjects, from academic content to skill-based learning. Each course includes structured modules, video lectures, downloadable resources, and interactive quizzes.",
@@ -66,10 +66,17 @@ const Projects = () => {
 
   return (
     <section id="portfolio" className="py-20 bg-gray-900">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+    Superior Quality, Scalable <br /> Web & Mobile Solutions.
+    
+  </h1>
+  <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+    Here’s a showcase of our recent projects:
+  </p>
+</div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-20">
-          Our Featured Work
-        </h2>
+        
         <div className="space-y-24">
           {projects.map((project, index) => (
             <div
@@ -84,21 +91,21 @@ const Projects = () => {
                 <p className="text-indigo-400 font-semibold mb-2">
                   {project.category}
                 </p>
-                <h3 className="text-3xl md:text-4xl font-bold mb-4">
+                <h3 className="text-3xl md:text-4xl font-italic mb-4">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 mb-6 leading-relaxed">
+                <p className="text-2xl font-bold gray-400 mb-6 leading-relaxed">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-3">
-                  {project.techStack.map((tech) => (
+                  {/* {project.techStack.map((tech) => (
                     <span
                       key={tech}
                       className="bg-gray-800 text-gray-300 text-sm font-medium px-4 py-2 rounded-lg"
                     >
                       {tech}
                     </span>
-                  ))}
+                  ))} */}
                 </div>
               </div>
               <div

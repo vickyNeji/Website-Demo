@@ -1,5 +1,7 @@
 import React from "react";
-import { Code } from "lucide-react";
+
+import companyLogo from '../assets/APPNITIVE.png';
+
 
 const Header = ({ scrolled, navigateTo }) => {
   const navLinks = [
@@ -20,17 +22,28 @@ const Header = ({ scrolled, navigateTo }) => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <div className="text-2xl font-bold tracking-wider">
-          <a
-            href="#home"
-            onClick={(e) => {
-              e.preventDefault();
-              navigateTo("home");
-            }}
-            className="flex items-center space-x-2 cursor-pointer"
-          >
-            <Code className="w-8 h-8 text-indigo-400" />
-            <span className="text-white font-bold">Appnitive Technologies</span>
-          </a>
+         <a
+  href="#home"
+  onClick={(e) => {
+    e.preventDefault();
+    navigateTo('home');
+  }}
+  className="flex items-center space-x-2 cursor-pointer"
+>
+  {/* Existing icon */}
+  
+
+  {/* ✅ Added image logo */}
+  <img
+  src={companyLogo}
+    alt="Appnitive Technologies Logo"
+    className="w-8 h-8 object-contain"
+  />
+
+  {/* Text */}
+  <span className="text-white font-bold">Appnitive Technologies</span>
+</a>
+
         </div>
         <nav className="hidden md:flex space-x-8 items-center">
           {navLinks.map((link) => (

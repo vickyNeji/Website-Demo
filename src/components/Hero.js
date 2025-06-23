@@ -45,7 +45,7 @@ const Hero = () => {
         setCurrentIndex((prevIndex) =>
           prevIndex === slides.length - 1 ? 0 : prevIndex + 1
         ),
-      5000 // Change slide every 5 seconds
+      4000 // Change slide every 5 seconds
     );
 
     return () => {

@@ -1,6 +1,6 @@
 import React from "react";
 
-import companyLogo from '../assets/APPNITIVE.png';
+import companyLogo from '../assets/white_logo.png';
 
 const Footer = ({ scrollToSection }) => {
   return (
@@ -15,12 +15,14 @@ const Footer = ({ scrollToSection }) => {
  
   
   <img
-     src={companyLogo}  // <-- replace with correct path
-    alt="Appnitive Logo"
-    className="w-6 h-6 object-contain rounded-full"
+      src={companyLogo}
+    alt="Appnitive Technologies Logo"
+      className="h-12 w-auto max-w-[100px] object-contain"
   />
 
-  <span>Appnitive Technologies</span>
+
+
+ 
 </h3>
             <p className="text-gray-400">
               Appnitive Technologies is a growing software development and digital marketing agency dedicated to empowering businesses and end-users. We simplify complex processes with our innovative ideas, latest technologies — including cloud computing, AI/ML, modern web and mobile frameworks (React, Kotlin, Flutter), and advanced digital marketing tools — and a strong focus on quality and speed.

@@ -1,6 +1,6 @@
 import React from "react";
 
-import companyLogo from '../assets/APPNITIVE.png';
+import companyLogo from '../assets/white_logo.png';
 
 
 const Header = ({ scrolled, navigateTo }) => {
@@ -37,11 +37,11 @@ const Header = ({ scrolled, navigateTo }) => {
   <img
   src={companyLogo}
     alt="Appnitive Technologies Logo"
-    className="w-8 h-8 object-contain"
+      className="h-12 w-auto max-w-[100px] object-contain"
   />
 
   {/* Text */}
-  <span className="text-white font-bold">Appnitive Technologies</span>
+  {/* <span className="text-white font-bold">Appnitive Technologies</span> */}
 </a>
 
         </div>

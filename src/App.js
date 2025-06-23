@@ -1,4 +1,3 @@
-
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
@@ -11,6 +10,7 @@ import Services from "./components/Services";
 import Stats from "./components/Stats";
 import Testimonials from "./components/Testimonials";
 import BlogPage from "./components/BlogPage";
+import DevelopmentProcess from "./components/DevelopmentProcess";
 function App() {
   const [scrolled, setScrolled] = useState(false);
   const [currentPage, setCurrentPage] = useState("home");

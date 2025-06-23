@@ -1,29 +1,29 @@
 import React, { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import sliderOne from "../assets/slider_one.jpg";
+import sliderTwo from "../assets/slider_two.jpg";
+import sliderThree from "../assets/slider_three.jpg";
+import sliderFour from "../assets/slider_four.jpg";
 
 const Hero = () => {
   const slides = [
     {
-      image:
-        "https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg",
+      image: sliderOne,
       title: "Discover Possibilities",
       subtitle: "Innovative web & mobile solutions for your vision.",
     },
     {
-      image:
-        "https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      image: sliderTwo,
       title: "Connect Ideas",
       subtitle: "Bridge your goals with powerful technology.",
     },
+    // {
+    //   image: sliderThree,
+    //   title: "Elevate Experiences",
+    //   subtitle: "Deliver seamless digital journeys that matter.",
+    // },
     {
-      image:
-        "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      title: "Elevate Experiences",
-      subtitle: "Deliver seamless digital journeys that matter.",
-    },
-    {
-      image:
-        "https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg",
+      image: sliderThree,
       title: "Build the Future",
       subtitle: "We craft tomorrow’s software today.",
     },
